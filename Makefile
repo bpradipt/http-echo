@@ -15,7 +15,7 @@ GOTAGS ?=
 GOMAXPROCS ?= 4
 
 # Get the project metadata
-GOVERSION := 1.9.2
+GOVERSION := 1.14.7
 PROJECT := $(CURRENT_DIR:$(GOPATH)/src/%=%)
 OWNER := $(notdir $(patsubst %/,%,$(dir $(PROJECT))))
 NAME := $(notdir $(PROJECT))
@@ -29,8 +29,8 @@ GOOS ?= $(shell go env GOOS)
 GOARCH ?= $(shell go env GOARCH)
 
 # Default os-arch combination to build
-XC_OS ?= darwin linux windows
-XC_ARCH ?= amd64
+XC_OS ?= linux
+XC_ARCH ?= ppc64le
 XC_EXCLUDE ?=
 
 # GPG Signing key (blank by default, means no GPG signing)
